@@ -1,0 +1,60 @@
+{
+  "color": [
+    {
+      "name": "color_1",
+      "value": "#ff0000"
+    },
+    {
+      "name": "lv_1",
+      "value": "#E6000000"
+    },
+    {
+      "name": "lv_2",
+      "value": "#99000000"
+    },
+    {
+      "name": "lv_3",
+      "value": "#66000000"
+    },
+    {
+      "name": "lv_4",
+      "value": "#33000000"
+    },
+    {
+      "name": "gray_background",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "light",
+      "value": "#0a59f7"
+    },
+    {
+      "name": "pressed",
+      "value": "#19000000"
+    },
+    {
+      "name": "background",
+      "value": "#19000000"
+    },
+    {
+      "name": "split_line",
+      "value": "#33000000"
+    },
+    {
+      "name": "icon_empty",
+      "value": "#E6000000"
+    },
+    {
+      "name": "icon_selected",
+      "value": "#0a59f7"
+    },
+    {
+      "name": "parting_line",
+      "value": "#33000000"
+    },
+    {
+      "name": "login_button",
+      "value": "#33000000"
+    }
+  ]
+}

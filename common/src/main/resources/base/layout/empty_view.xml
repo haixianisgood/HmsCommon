@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:id="$+id:image_empty"
+        ohos:image_src="$graphic:ic_error"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:max_height="50vp"
+        ohos:max_width="50vp"
+        ohos:scale_mode="inside"/>
+
+    <RoundProgressBar
+        ohos:id="$+id:loading_progress"
+        ohos:weight="1"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:max_height="50vp"
+        ohos:max_width="50vp"
+        ohos:progress_color="$color:light"
+        ohos:progress="30"
+        ohos:start_angle="300"
+        ohos:max_angle="360"
+        ohos:progress_width="3vp"
+        ohos:progress_hint_text="$string:loading"
+        ohos:progress_hint_text_size="10vp"
+        ohos:progress_hint_text_color="$color:lv_3"/>
+
+    <Text
+        ohos:id="$+id:text_loading"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text_alignment="center"
+        ohos:text_color="$color:lv_3"
+        ohos:text_size="20vp"
+        ohos:text="$string:loading"/>
+</DirectionalLayout>

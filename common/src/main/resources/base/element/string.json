@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "common_library",
+      "value": "common_library"
+    },
+    {
+      "name": "loading",
+      "value": "loading"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "register",
+      "value": "注册"
+    },
+    {
+      "name": "account",
+      "value": "账号"
+    },
+    {
+      "name": "password",
+      "value": "密码"
+    },
+    {
+      "name": "username",
+      "value": "用户名"
+    }
+  ]
+}

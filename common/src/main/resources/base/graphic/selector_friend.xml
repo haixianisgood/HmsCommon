@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<state-container
+    xmlns:ohos="http://schemas.huawei.com/res/ohos">
+    <!--注意，state-container中，先添加的item显示在上，如果empty在上，那么selected将无法显示-->
+    <item ohos:state="component_state_selected" ohos:element="$graphic:ic_friend_selected"/>
+    <item ohos:state="component_state_empty" ohos:element="$graphic:ic_friend"/>
+</state-container>

@@ -1,0 +1,26 @@
+{
+  "pattern": [
+    {
+      "name": "base",
+      "value": [
+        {
+          "name": "width",
+          "value": "100vp"
+        },
+        {
+          "name": "height",
+          "value": "100vp"
+        },
+        {
+          "name": "size",
+          "value": "25px"
+        },
+        {
+          "name": "login_text_size",
+          "value": "20vp"
+        }
+
+      ]
+    }
+  ]
+}

@@ -59,6 +59,7 @@ public class EmptyView extends ComponentContainer implements PlaceholderView {
         image.setVisibility(HIDE);
         progressBar.setVisibility(HIDE);
         text.setText(message);
+        text.setVisibility(VISIBLE);
     }
 
     @Override
@@ -72,11 +73,11 @@ public class EmptyView extends ComponentContainer implements PlaceholderView {
     public void showLoading() {
         image.setVisibility(HIDE);
         text.setVisibility(HIDE);
-        image.setVisibility(INVISIBLE);
         startProgressBar();
     }
 
     private void startProgressBar() {
+        progressBar.setVisibility(VISIBLE);
         eventHandler = new EventHandler(EventRunner.getMainEventRunner()) {
             @Override
             protected void processEvent(InnerEvent event) {

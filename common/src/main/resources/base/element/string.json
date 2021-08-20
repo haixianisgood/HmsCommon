@@ -10,23 +10,31 @@
     },
     {
       "name": "login",
-      "value": "登录"
+      "value": "登 录"
     },
     {
       "name": "register",
-      "value": "注册"
+      "value": "注 册"
     },
     {
       "name": "account",
-      "value": "账号"
+      "value": "账 号"
     },
     {
       "name": "password",
-      "value": "密码"
+      "value": "密 码"
     },
     {
       "name": "username",
       "value": "用户名"
+    },
+    {
+      "name": "hint_account_input",
+      "value": "请输入账号"
+    },
+    {
+      "name": "hint_password_input",
+      "value": "请输入密码"
     }
   ]
 }

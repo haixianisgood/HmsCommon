@@ -30,7 +30,7 @@
     },
     {
       "name": "pressed",
-      "value": "#19000000"
+      "value": "#33000000"
     },
     {
       "name": "background",
@@ -54,7 +54,7 @@
     },
     {
       "name": "login_button",
-      "value": "#33000000"
+      "value": "#19000000"
     }
   ]
 }

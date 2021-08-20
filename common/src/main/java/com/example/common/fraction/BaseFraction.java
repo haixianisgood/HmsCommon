@@ -14,13 +14,6 @@ public abstract class BaseFraction extends Fraction {
     @Override
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
         mComponent = scatter.parse(layoutId(), container, false);
-
-        if(!isInitialized) {
-            initData();
-            initComponent();
-        }
-
-        show();
         return mComponent;
     }
 
@@ -28,7 +21,12 @@ public abstract class BaseFraction extends Fraction {
     protected void onStart(Intent intent) {
         super.onStart(intent);
 
-
+        if(!isInitialized) {
+            initComponent();
+            isInitialized = true;
+        }
+        before();
+        show();
     }
 
     @Override
@@ -48,7 +46,7 @@ public abstract class BaseFraction extends Fraction {
 
     protected abstract int layoutId();
 
-    protected abstract void initData();
+    protected abstract void before();
 
     protected abstract void initComponent();
 

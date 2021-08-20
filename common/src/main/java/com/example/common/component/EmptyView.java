@@ -37,6 +37,7 @@ public class EmptyView extends ComponentContainer implements PlaceholderView {
         image = (Image) findComponentById(ResourceTable.Id_image_empty);
         text = (Text) findComponentById(ResourceTable.Id_text_loading);
         progressBar = (RoundProgressBar) findComponentById(ResourceTable.Id_loading_progress);
+        showEmpty();
     }
 
     @Override
@@ -49,7 +50,8 @@ public class EmptyView extends ComponentContainer implements PlaceholderView {
 
     @Override
     public void showSuccess() {
-
+        showEmpty();
+        this.setVisibility(HIDE);
     }
 
     @Override
@@ -70,11 +72,12 @@ public class EmptyView extends ComponentContainer implements PlaceholderView {
     public void showLoading() {
         image.setVisibility(HIDE);
         text.setVisibility(HIDE);
+        image.setVisibility(INVISIBLE);
         startProgressBar();
     }
 
     private void startProgressBar() {
-        eventHandler = new EventHandler(EventRunner.current()) {
+        eventHandler = new EventHandler(EventRunner.getMainEventRunner()) {
             @Override
             protected void processEvent(InnerEvent event) {
                 if (event.eventId == EVENT_ID) {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:background_element="$color:gray_background"
+    ohos:orientation="vertical">
+
+    <StackLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+
+        <com.example.common.component.EmptyView
+            ohos:id="$+id:empty_view"
+            ohos:height="match_content"
+            ohos:width="match_parent"/>
+
+        <DirectionalLayout
+            ohos:id="$+id:window_login_register"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:left_margin="20vp"
+            ohos:right_margin="20vp"/>
+    </StackLayout>
+
+</DirectionalLayout>

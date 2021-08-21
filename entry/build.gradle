@@ -1,8 +1,6 @@
-apply plugin: 'com.huawei.ohos.library'
-//apply plugin: 'maven-publish'
-apply from: '../publish.gradle'
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
 //For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
-group='com.github.haixianisgood'
 ohos {
     compileSdkVersion 5
     defaultConfig {
@@ -19,19 +17,25 @@ ohos {
         debug {
             dataBindingEnabled true
         }
-
     }
     compileOptions {
         annotationEnabled true
     }
 }
 
-repositories {
-    maven {
-        url 'https://jitpack.io'
-    }
-}
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
     testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.200'
+    implementation 'com.github.haixianisgood:NettyHttpClient:0.9.2'
+    implementation project(":common")
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+}
+decc {
+    supportType = ['html','xml']
+}
+
+repositories {
+    mavenCentral()
 }

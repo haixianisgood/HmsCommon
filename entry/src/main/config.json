@@ -1,0 +1,82 @@
+{
+  "app": {
+    "bundleName": "com.example.hmscommon",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.hmscommon",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.hmscommon.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "访问HTTP",
+        "usedScene": {
+          "ability": ["com.example.hmscommon.MainAbility"],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.READ_USER_STORAGE",
+        "reason": "访问HTTP",
+        "usedScene": {
+          "ability": ["com.example.hmscommon.MainAbility"],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_USER_STORAGE",
+        "reason": "访问HTTP",
+        "usedScene": {
+          "ability": [
+            "com.example.hmscommon.MainAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.ACCESS_MISSIONS",
+        "reason": "访问HTTP",
+        "usedScene": {
+          "ability": ["com.example.hmscommon.MainAbility"],
+          "when": "always"
+        }
+      }
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.example.hmscommon.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

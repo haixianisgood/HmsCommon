@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="horizontal">
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="50vp"
+            ohos:text_alignment="center"
+            ohos:text_color="$color:lv_1"
+            ohos:text_size="20vp"
+            ohos:text_cursor_visible="false"
+            ohos:text="$string:account"/>
+
+        <TextField
+            ohos:id="$+id:input_account"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:weight="1"
+            ohos:left_margin="10vp"
+            ohos:right_margin="10vp"
+            ohos:text_cursor_visible="false"
+            ohos:text_size="16vp"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="$color:lv_1"
+            ohos:hint="$string:hint_account_input"
+            ohos:hint_color="$color:lv_4"
+            ohos:max_text_lines="1"
+            ohos:padding_for_text="true"
+            ohos:padding="3vp"
+            ohos:basement="$color:parting_line"/>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="horizontal">
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="50vp"
+            ohos:text_alignment="center"
+            ohos:text_color="$color:lv_1"
+            ohos:text_size="20vp"
+            ohos:text_cursor_visible="false"
+            ohos:text="$string:password"/>
+
+        <TextField
+            ohos:id="$+id:input_password"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:weight="1"
+            ohos:left_margin="10vp"
+            ohos:right_margin="10vp"
+            ohos:text_cursor_visible="false"
+            ohos:text_size="16vp"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="$color:lv_1"
+            ohos:max_text_lines="1"
+            ohos:hint="$string:hint_password_input"
+            ohos:hint_color="$color:lv_4"
+            ohos:text_input_type="pattern_password"
+            ohos:padding_for_text="true"
+            ohos:padding="3vp"
+            ohos:basement="$color:parting_line"/>
+    </DirectionalLayout>
+
+    <Button
+        ohos:id="$+id:button_login"
+        ohos:height="40vp"
+        ohos:width="130vp"
+        ohos:top_margin="15vp"
+        ohos:background_element="$graphic:shape_login_button"
+        ohos:text="$string:login"
+        ohos:text_color="$color:light"
+        ohos:text_size="25vp"
+        ohos:text_cursor_visible="false"
+        ohos:text_alignment="center"/>
+
+    <Text
+        ohos:id="$+id:login_result"
+        ohos:text="${activeData}"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text_alignment="center"
+        ohos:text_size="25vp"
+        ohos:text_cursor_visible="false"
+        ohos:text_color="$color:lv_1"
+        ohos:top_margin="50vp"/>
+
+</DirectionalLayout>

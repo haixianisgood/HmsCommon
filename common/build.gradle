@@ -1,4 +1,5 @@
 apply plugin: 'com.huawei.ohos.library'
+
 //For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
 ohos {
     compileSdkVersion 5
@@ -11,7 +12,12 @@ ohos {
                 proguardEnabled false
                 rulesFiles 'proguard-rules.pro'
             }
+            dataBindingEnabled true
         }
+        debug {
+            dataBindingEnabled true
+        }
+
     }
     compileOptions {
         annotationEnabled true

@@ -2,6 +2,7 @@ package com.example.common.fraction;
 
 import com.example.common.component.PlaceholderView;
 import ohos.aafwk.ability.fraction.Fraction;
+import ohos.aafwk.abilityjet.databinding.DataBinding;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
@@ -11,9 +12,11 @@ public abstract class BaseFraction extends Fraction {
     protected Component mComponent;
     protected PlaceholderView mPlaceholderView;
     protected boolean isInitialized = false;
+    protected ComponentContainer mComponentContainer;
     @Override
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
         mComponent = scatter.parse(layoutId(), container, false);
+        this.mComponentContainer = container;
         return mComponent;
     }
 

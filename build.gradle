@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\coura\\.ohos\\config\\auto_debug_80086000302601122.p12')
+            storePassword '0000001834A59FFDA0F127FB26579CE74DA66DFDAFD106C4D9A6541EDF64B1F77FD85A63D1D7A417'
+            keyAlias = 'debugKey'
+            keyPassword '00000018B9AB12FF051CFA8167FC25E04AC513399C9641C7C9CD2CB5F6EA4989DE2714A36960F44F'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\coura\\.ohos\\config\\auto_debug_hmscommon_80086000302601122.p7b')
+            certpath file('C:\\Users\\coura\\.ohos\\config\\auto_debug_80086000302601122.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+    buildTypes {
+        debug {
+            dataBindingEnabled true
+        }
+        release {
+            dataBindingEnabled true
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        mavenCentral()
+
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.5.0'
+        classpath 'com.huawei.ohos:decctest:1.2.4.1'
+        //classpath 'com.github.haixianisgood:NettyHttpClient:0.9'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}

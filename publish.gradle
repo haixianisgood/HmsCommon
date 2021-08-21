@@ -9,7 +9,7 @@ def DEFAULT_POM_DESCRIPTION='myLib for harmonyos'
 def MAVEN_USERNAME='admin'   //远程Maven仓的用户名
 def MAVEN_PASSWORD='******'  //远程Maven仓的密码
 def LOCAL_MAVEN_REPOSITORY_URL='G:/MavenLocal/'  //本地Maven仓地址
-def REMOTE_MAVEN_REPOSITORY_URL='https:// '  //远程Maven仓地址
+def REMOTE_MAVEN_REPOSITORY_URL='https://jitpack.io'  //远程Maven仓地址
 
 afterEvaluate { project ->
     DEFAULT_POM_ARTIFACT_ID = project.name
@@ -29,14 +29,14 @@ afterEvaluate { project ->
         }
         repositories {
             maven {
-                url = LOCAL_MAVEN_REPOSITORY_URL  //发布到本地Maven仓
+                //url = LOCAL_MAVEN_REPOSITORY_URL  //发布到本地Maven仓
                 //发布到远程Maven仓的地址以及Maven仓的帐号和密码
-                /*url = REMOTE_MAVEN_REPOSITORY_URL
+                url = REMOTE_MAVEN_REPOSITORY_URL
                  credentials {
                     username MAVEN_USERNAME
                     password MAVEN_PASSWORD
                  }
-                */
+
             }
         }
     }
